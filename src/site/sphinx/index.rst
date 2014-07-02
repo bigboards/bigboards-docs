@@ -15,6 +15,7 @@ Contents:
    concepts
    hardware
    tints
+   update
    faq
 
 
