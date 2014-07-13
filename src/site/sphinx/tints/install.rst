@@ -1,0 +1,2 @@
+Installing a tint
+#################
