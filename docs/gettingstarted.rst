@@ -3,13 +3,13 @@ Getting started
 
 Power
 =======================================================================================================================
-Since the hex is an electronical device, it benefits from having power. This means you will have to make a connection from your hex to your wall outlet. An external power supply is provided to make this connection.
+Since the hex is an electronic device, it benefits from having power. This means you will have to make a connection from your hex to your wall outlet. An external power supply is provided to make this connection.
 
 #. Plug the round power plug into the hex. You can find the power jack next to the wireless antenna at the bottom of the device
 
 #. Plug the power supply into a wall outlet
 
-Once a connection has been made, the LED's at the bottom of the hex will light up.
+Once a connection has been made, the LEDs at the bottom of the hex will light up.
 
 Network
 =======================================================================================================================
@@ -18,7 +18,7 @@ Making a wired network connection
 -----------------------------------------------------------------------------------------------------------------------
 The hex contains a switch which you can use at any time to hook your laptop to the device. There is no DHCP server running so you will have to configure an ip address yourself.
 
-#. Connect your hex directly to the internal switch of the hex. Plug a regular Cat5 ethernet cable into one of the two free ports at the bottom of the hex. Plug the other end of the ehternet cable into your laptop or desktop.
+#. Connect your hex directly to the internal switch of the hex. Plug a regular Cat5 ethernet cable into one of the two free ports at the bottom of the hex. Plug the other end of the ethernet cable into your laptop or desktop.
 
 #. On your laptop or desktop, change the network configuration to use a static ip address. You will need the following parameters to do this: ::
 
@@ -29,7 +29,7 @@ The hex contains a switch which you can use at any time to hook your laptop to t
 
 Connecting to your wireless network
 -----------------------------------------------------------------------------------------------------------------------
-A hex is equiped with a wireless connection on the master node. This means it can make a connection to a wireless accesspoint or router. Depending on your level of security you will have to modify different settings.
+A hex is equipped with a wireless connection on the master node. This means it can make a connection to a wireless access-point or router. Depending on your level of security you will have to modify different settings.
 
 We are working on making this configurable through the web interface, but currently this has to be configured through editing the configuration files on the master node.
 
