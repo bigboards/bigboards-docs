@@ -49,5 +49,4 @@ where <patch-id> is the id of the patch you want to apply.
 
 Please note that applying patch in the correct order is crucial. Normally, you should execute them chronologically! So, simply in the order of the patch IDs.
 
-.. warning::
-For the time being we have disable the updater because we need to automate the chronological application of patches. For the time being, we'll have to manually apply the various patches to your Hex!
+.. warning:: For the time being we have disable the updater because we need to automate the chronological application of patches. For the time being, we'll have to manually apply the various patches to your Hex!
