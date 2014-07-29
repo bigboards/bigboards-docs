@@ -37,7 +37,7 @@ If all commands complete succesfully you will have a new firmware running on you
 
 Patching your hex
 =================
-As the requirements for our bigboards-updated became more complex, we had to implement that process as applying a series of patches. Each patch is defined as the date it was created, e.g. 20140505 and 20140717.
+As the requirements for our bigboards-updater became more complex, we had to implement the updating process by applying a series of patches. Each patch is defined by the date it was created, e.g. 20140505 and 20140717.
 
 You apply a specific patch to your Hex by executing:::
 
@@ -45,9 +45,9 @@ You apply a specific patch to your Hex by executing:::
 	bb1 #> sudo apt-get install bigboards-updater
 	bb1 #> /opt/bb/runtimes/bigboards-updater/patch.sh <patch-id>
 
-where <patch-id> is the id of the patch you want to apply.
+where <patch-id> is the ID of the patch you want to apply.
 
-Please note that applying patch in the correct order is crucial. Normally, you should execute them chronologically! So, simply in the order of the patch IDs.
+Please note that applying patches in the correct order is crucial. Normally, you should execute them chronologically! So, simply in the order of the patch IDs.
 
 .. warning::
 For the time being we have disable the updater because we need to automate the chronological application of patches. For the time being, we'll have to manually apply the various patches to your Hex!
