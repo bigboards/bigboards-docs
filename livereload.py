@@ -4,10 +4,10 @@ from livereload import Server, shell
 server = Server()
 
 # watch docs to compile
-server.watch('docs/', shell('make html'))
+server.watch('./docs/', shell('make html'))
 
 # watch html to serve
-server.watch('build/html/')
+server.watch('./build/html/')
 
 # serve the server and open the URL
 server.serve(open_url=True)

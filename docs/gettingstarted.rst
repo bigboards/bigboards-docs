@@ -1,78 +1,83 @@
 Getting started
 ###############
+You Hex is delivered to you as fully assembled and completely installed! Normally, there is nothing additional you have to do, but to unbox it and start to use it!
 
 Power
 =======================================================================================================================
-Since the hex is an electronic device, it benefits from having power. This means you will have to make a connection from your hex to your wall outlet. An external power supply is provided to make this connection.
+Since the Hex is an electronic device, it benefits from having power. This means you will have to make a connection from your Hex to your wall outlet. An **external power supply** is provided to make this connection.
 
-#. Plug the round power plug into the hex. You can find the power jack next to the wireless antenna at the bottom of the device
+#. Plug the **round power plug** into the Hex. You can find the power jack next to the wireless antenna at the bottom of the device
 
-#. Plug the power supply into a wall outlet
+#. Attach the separate **power cord** to the power supply. The delivered cord is a regular computer power cord.
 
-Once a connection has been made, the LEDs at the bottom of the hex will light up.
+#. Plug the power cord into a **wall outlet**.
+
+Once a connection has been made, the **6 white LEDs** at the bottom of the Hex light up and the Hex boots.
 
 Network
 =======================================================================================================================
+The Hex contains an **internal 8-ports ethernet switch** which you can use at any time to make wired connections, either directly with your computer, either with your LAN.
 
-Making a wired network connection
+.. warning:: The master node contains WiFi (with antenna) but is unused for now.
+
+The networking within you Hex is setup to be able to run 2 separate LANs:
+
+#. The **internal LAN** interconnects all nodes across the internal switch and is setup with static IP adresses.
+
+#. The **external LAN** interconnects all nodes with your home or office LAN when you hook your Hex's internal switch to you LAN by an ethernet cable.
+
+Making a wired network connection with your LAN
 -----------------------------------------------------------------------------------------------------------------------
-The hex contains a switch which you can use at any time to hook your laptop to the device. There is no DHCP server running so you will have to configure an ip address yourself.
+Using the internal switch, you can hook your Hex to your LAN.
 
-#. Connect your hex directly to the internal switch of the hex. Plug a regular Cat5 ethernet cable into one of the two free ports at the bottom of the hex. Plug the other end of the ethernet cable into your laptop or desktop.
+#. Plug a regular Cat5 (or higher) *ethernet cable* into one of the two **free ports at the bottom of the Hex**.
 
-#. On your laptop or desktop, change the network configuration to use a static ip address. You will need the following parameters to do this: ::
+#. Plug the other end of the ethernet cable into an RJ45 **port of your LAN or local/desktop switch**.
 
-	ip address: 172.20.40.14
-	netmask: 255.255.255.240
+Your Hex will be assigned **12 ip addresses** from your network's DHCP server (LAN server or home router) in the range your LAN is setup. Each node and each containers will receive its own ip address.
 
-#. Connect to the management console at http://172.20.40.1/
+If your network allows **multicast DNS**, your Hex will be visible on the network using his **personal name**, e.g. Alice. All nodes and containers receive an identifiable network name: ::
 
-Connecting to your wireless network
+    <name>-[n|v]x
+    where name is the Hex's personal name
+      and n for nodes
+      and v for containers
+      and x = 1..6 for the number of the node
+
+E.g. ``Alice-n1`` for Alice's master node and ``Alice-v6` for the last node's container.
+
+.. note:: For container names to appear, a Tint has to be installed, otherwise containers are not created on your Hex.
+
+Making a wired network connection directly with your computer
 -----------------------------------------------------------------------------------------------------------------------
-A hex is equipped with a wireless connection on the master node. This means it can make a connection to a wireless access-point or router. Depending on your level of security you will have to modify different settings.
+You can directly connect your laptop to the internal switch of your Hex. However, as the internal network is static, you have to reconfire your personal computer's network settings.
 
-We are working on making this configurable through the web interface, but currently this has to be configured through editing the configuration files on the master node.
+#. On your laptop or desktop, attach an ethernet cable, at least CAT5e.
 
-#. Connect your hex to your wired network. You can look at the previous section on how to that.
+#. Plug the other side of the ethernet cable into 1 of the 2 free ethernet ports at the bottom of your Hex.
 
-#. Connect to the master node using your favorite SSH client: ::
+#. Change the network configuration on your computer to use a static ip address. You will need the following parameters to do this: ::
 
-	local #> ssh bb@172.20.40.1
-	password: <Swh^bdl>
+	ip address: 172.20.40.200
+	netmask: 255.255.255.0
+	gateway: <none>
 
-#. Open an editor to modify the network configuration files: ::
+ .. note:: Any ip address above ``172.20.40.16`` should do, because ``172.20.40.[1-6]`` are used for the physical nodes and ``172.20.40.[11-16]`` for the Tints containers.
 
-	bb1 #> nano /etc/network/interfaces
+What ip address does my Hex's master node effectively use?
+-----------------------------------------------------------------------------------------------------------------------
+The ``<ip address>`` that the master node of your Hex effectively uses, depends on how you have set up your networking:
 
-#. Make modifications to the network configuration: ::
+#. If you have connected your Hex to the **LAN**, your LAN will have dispatched an ip address using DHCP.
 
-    auto wlan0
-    iface wlan0 inet dhcp
-        wireless-essid <your-ssid>
+    #. if your LAN supports **multicast DNS**, you are able to target your Hex's master node as ``<name>-n1``, where ``<name>`` is your Hex's personal name.
 
-#. You can use the iwconfig and ifconfig commands to check if your hex is connected to your wireless network. For example, you should be able to see something like the following when running the iwconfig command: ::
+    #. but if your LAN does **NOT** support **multicast DNS**, you will have to figure out what ip address was assigned to your Hex's master node. Either ask your infrastructure team, check your home router or temporarily make a wired connection directly with your computer. In the former case, you can SSH into your Hex and run ``ìfconfig`` to list available networks.
 
-    ⬢ dexter bb@bb1 ~$ iwconfig wlan0
-    wlan0     IEEE 802.11abg  ESSID:"<Your SSID>"
-              Mode:Managed  Frequency:2.462 GHz  Access Point: XX:XX:XX:XX:XX:XX
-              Bit Rate=65 Mb/s   Tx-Power=1496 dBm
-              Retry  long limit:7   RTS thr:off   Fragment thr:off
-              Power Management:on
-              Link Quality=59/70  Signal level=-51 dBm
-              Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
-              Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+#. If you have connected your Hex **directly to your computer**, you can address your Hex's master node at ``172.20.40.1``
 
-#. Running ifconfig will tell you the exact ip address your hex received ::
-
-    ⬢ dexter bb@bb1 ~$ ifconfig wlan0
-    wlan0     Link encap:Ethernet  HWaddr XX:XX:XX:XX:XX:XX
-              inet addr:192.168.2.101  Bcast:192.168.2.255  Mask:255.255.255.0
-              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-              RX packets:561292 errors:0 dropped:2 overruns:0 frame:0
-              TX packets:328255 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000
-              RX bytes:601276696 (601.2 MB)  TX bytes:94125372 (94.1 MB)
-
-Use Your hex
+Browsing to your Hex's management console
 =======================================================================================================================
-If you point your web browser to http://<ip address>/, you will be presented with a web based management console. From here you can monitor the resource usage of your hex, as well as performing management operations like updating or installing tints.
+Point your web browser to ``http://<ip address>/`` once you know the ip address of your Hex's master node.
+
+The master node will serve management console that allows you to monitor the resource usage of your Hex, as well as to perform management operations like updating your Hex's firmware or installing tints.

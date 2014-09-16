@@ -8,14 +8,14 @@ There are 3 categories of tints, each of them serving a different purpose but al
 
 Technology Tints
 =======================================================================================================================
-Technology tints bring your favorite stack to the hex. It allows you to get started with your technology stack as fast as possible. We currently have two tech-tints available; one for Hadoop 2.2.0 and one for ElasticSearch, but expect a lot more of them in the near future.
+Technology tints bring your favorite stack to the Hex. It allows you to get started with your technology stack as fast as possible. We currently have two tech-tints available; one for Hadoop 2.2.0 and one for ElasticSearch, but expect a lot more of them in the near future.
 
 If you have a suggestion for a tint, you may always send us your ideas. Or you can always create one yourself.
 
 Data Tints
 =======================================================================================================================
-We wrapped some of the publicly available datasets in what we call a data tint. They share the ease of use of technology tints but instead of bringing a stack to the hex, they will bring the data you can use within your stack.
+We wrapped some of the publicly available datasets in what we call a data tint. They share the ease of use of technology tints but instead of bringing a stack to the Hex, they will bring the data you can use within your stack.
 
 Educational Tints
 =======================================================================================================================
-We want to make it as easy as possible to learn about new technologies, which is why we introduced educational tints. This type of tints bring documentation and tutorials to your hex.
+We want to make it as easy as possible to learn about new technologies, which is why we introduced educational tints. This type of tints bring documentation and tutorials to your Hex.
