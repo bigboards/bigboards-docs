@@ -1,5 +1,14 @@
+==============
 Tints
-#######################################################################################################################
+==============
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   install
+
 When you are learning you will probably come across different technology stacks and architectures, each with their own peculiarities. In a lot of the cases you aren't even interested in going through the process of installing and configuring all the different parts that make up the architecture. The same goes for data, where you don't want to search and figure out all of these formats. The only thing you actually want is start learning, developing or exploring. In other words, you want to get the job done for you.
 
 This is what tints are all about. We called them to live to make it easier for you to get started with the things you **want** to do, skipping the things you **have** to do.

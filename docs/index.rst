@@ -12,12 +12,10 @@ Contents:
    :maxdepth: 2
 
    gettingstarted
-   concepts
-   hardware
-   tints
-   update
+   hex/index
+   administration/index
+   tints/index
    faq
-
 
 Indices and tables
 ==================
