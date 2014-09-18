@@ -9,10 +9,11 @@
 
     By using ARM technology, we are able to keep the energy consumption as low as possible. Did you know the Hex only consumes 48 Watts when under load?
 
-.. topic:: There is only 2Gb of RAM on each node. Isn't that too low to work with bigdata technologies?
+.. topic:: There is only 2Gb of RAM on each node. Isn't that too low to work with Big Data technologies?
 
-    Currently we are limited to 2Gbs of RAM because there aren't any boards around with more RAM. Even if there was, since 64bit ARM CPU's aren't around yet, you would be limited to less then 4Gb. Eventually we want to have as much memory as possible, but this is limited to what we can get from the market.
-    That being said, close to all bigdata technologies can run on a Hex. The only thing you need to keep in mind is the size of the dataset you are processing.
+    Currently we are limited to 2Gbs of RAM because there aren't any SoC boards readily available with more RAM. Even then, since 64bit ARM CPU's aren't around yet, you are limited to less then 4Gb. Eventually we want to have as much memory as possible, but this is limited to what we can get from the suppliers.
+
+    That being said, close to all Big Data technologies can run on a Hex. The only thing you need to keep in mind is the size of the dataset you are processing.
 
 .. topic:: Doesn't ARM need specific packages?
 
