@@ -1,6 +1,6 @@
 Getting started
 ###############
-You Hex is delivered to you as fully assembled and completely installed! Normally, there is nothing additional you have to do, but to unbox it and start to use it!
+You Hex is delivered to you as a fully assembled and completely installed device! Normally, there is nothing additional you have to do, but to unbox it and start to use it!
 
 Power
 =======================================================================================================================
@@ -30,11 +30,11 @@ Making a wired network connection with your LAN
 -----------------------------------------------------------------------------------------------------------------------
 Using the internal switch, you can hook your Hex to your LAN.
 
-#. Plug a regular Cat5 (or higher) *ethernet cable* into one of the two **free ports at the bottom of the Hex**.
+#. Plug a regular CAT5e (or higher) ethernet cable into one of the two **free ports at the bottom of the Hex**.
 
 #. Plug the other end of the ethernet cable into an RJ45 **port of your LAN or local/desktop switch**.
 
-Your Hex will be assigned **12 ip addresses** from your network's DHCP server (LAN server or home router) in the range your LAN is setup. Each node and each containers will receive its own ip address.
+Your Hex will be assigned **12 ip addresses** from your network's DHCP server (LAN server or home router) in the range your LAN is setup. Each node and each container will receive its own ip address.
 
 If your network allows **multicast DNS**, your Hex will be visible on the network using his **personal name**, e.g. Alice. All nodes and containers receive an identifiable network name: ::
 
@@ -46,17 +46,17 @@ If your network allows **multicast DNS**, your Hex will be visible on the networ
 
 E.g. ``Alice-n1`` for Alice's master node and ``Alice-v6` for the last node's container.
 
-.. note:: For container names to appear, a Tint has to be installed, otherwise containers are not created on your Hex.
+.. note:: For container names to appear, a Tint has to be installed on your Hex, otherwise containers are not created on your Hex.
 
 Making a wired network connection directly with your computer
 -----------------------------------------------------------------------------------------------------------------------
-You can directly connect your laptop to the internal switch of your Hex. However, as the internal network is static, you have to reconfire your personal computer's network settings.
+You can directly connect your laptop to the internal switch of your Hex. However, as the internal network is static, you have to reconfigure your personal computer's network settings.
 
-#. On your laptop or desktop, attach an ethernet cable, at least CAT5e.
+#. On your laptop or desktop, attach an **ethernet cable**, at least CAT5e.
 
-#. Plug the other side of the ethernet cable into 1 of the 2 free ethernet ports at the bottom of your Hex.
+#. Plug the other side of the ethernet cable into 1 of the **2 free ethernet ports at the bottom of your Hex**.
 
-#. Change the network configuration on your computer to use a static ip address. You will need the following parameters to do this: ::
+#. **Change the network configuration** on your computer to use a static ip address. You will need the following parameters to do this: ::
 
 	ip address: 172.20.40.200
 	netmask: 255.255.255.0
@@ -72,7 +72,7 @@ The ``<ip address>`` that the master node of your Hex effectively uses, depends 
 
     #. if your LAN supports **multicast DNS**, you are able to target your Hex's master node as ``<name>-n1``, where ``<name>`` is your Hex's personal name.
 
-    #. but if your LAN does **NOT** support **multicast DNS**, you will have to figure out what ip address was assigned to your Hex's master node. Either ask your infrastructure team, check your home router or temporarily make a wired connection directly with your computer. In the former case, you can SSH into your Hex and run ``ìfconfig`` to list available networks.
+    #. but if your LAN does **NOT** support **multicast DNS**, you will have to figure out what ip address was assigned to your Hex's master node. Either ask your infrastructure team, check your home router or temporarily make a wired connection directly between your Hex and your computer. In the former case, you can SSH into your Hex and run ``ìfconfig`` to list available networks.
 
 #. If you have connected your Hex **directly to your computer**, you can address your Hex's master node at ``172.20.40.1``
 
@@ -80,4 +80,4 @@ Browsing to your Hex's management console
 =======================================================================================================================
 Point your web browser to ``http://<ip address>/`` once you know the ip address of your Hex's master node.
 
-The master node will serve management console that allows you to monitor the resource usage of your Hex, as well as to perform management operations like updating your Hex's firmware or installing tints.
+The master node will serve the BigBoards management console that allows you to monitor the resource usage of your Hex, as well as to perform management operations like updating your Hex's firmware or installing tints.
