@@ -36,6 +36,8 @@ Using the internal switch, you can hook your Hex to your LAN.
 
 Your Hex will be assigned **12 ip addresses** from your network's DHCP server (LAN server or home router) in the range your LAN is setup. Each node and each container will receive its own ip address.
 
+.. _mDNS:
+
 If your network allows **multicast DNS**, your Hex will be visible on the network using his **personal name**, e.g. Alice. All nodes and containers receive an identifiable network name: ::
 
     <name>-[n|v]x
