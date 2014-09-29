@@ -9,9 +9,9 @@ For the impatient
 
 Or
 
- - Login to the Hex
- - execute 'apt-get update'
- - execute 'apt-get install bigboards-updater'
+ - Login to the Hex as user 'bb'
+ - execute 'sudo apt-get update'
+ - execute 'sudo apt-get install bigboards-updater'
  - execute '/opt/bb/runtimes/bigboards-updater/update.sh'
 
 Updating your Hex
