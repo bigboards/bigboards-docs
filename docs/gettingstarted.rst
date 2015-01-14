@@ -80,6 +80,6 @@ The ``<ip address>`` that the master node of your Hex effectively uses, depends 
 
 Browsing to your Hex's management console
 =======================================================================================================================
-Point your web browser to ``http://<ip address>/`` once you know the ip address of your Hex's master node.
+Point your web browser to ``http://<ip address>:7000/`` once you know the ip address of your Hex's master node.
 
 The master node will serve the BigBoards management console that allows you to monitor the resource usage of your Hex, as well as to perform management operations like updating your Hex's firmware or installing tints.
