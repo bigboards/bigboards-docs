@@ -1,0 +1,13 @@
+site_name: BigBoards
+pages:
+- [index.md, Home]
+- [versions.md, Versions]
+- [migrate.md, Migrate]
+- [gettingstarted.md, Getting Started]
+- [userguide/mmc.md, User Guide, Management Console]
+- [userguide/cli.md, User Guide, Command Line]
+- [userguide/node.md, User Guide, A Node]
+- [userguide/network.md, User Guide, Network]
+- [userguide/createstack.md, User Guide, Create a tint]
+- [faq/index.md, FAQ]
+theme: readthedocs 

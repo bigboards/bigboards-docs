@@ -2,3 +2,6 @@
 *.iml
 target
 build
+docs/site/
+docs/site
+docs/_themes
