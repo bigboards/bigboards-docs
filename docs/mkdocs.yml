@@ -7,12 +7,12 @@ pages:
 - [index.md, Home]
 - [versions.md, Versions]
 - [gettingstarted.md, Getting Started]
-- [hex/hardware.md, Hardware]
-- [hex/software.md, Software]
-- [administration/update.md, Updating]
-- [administration/internal_network.md, Internal Network]
-- [tints/sorts.md, Sorts of Tints]
-- [tints/install.md, Installing Tints]
+- [hex/hardware.md, Device]
+- [hex/software.md, Device]
+- [administration/update.md, Administration]
+- [administration/internal_network.md, Administration]
+- [tints/sorts.md, Tints]
+- [tints/install.md, Tints]
 - [faq.md, FAQ]
 theme: readthedocs 
 
