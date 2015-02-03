@@ -1,4 +1,8 @@
 site_name: BigBoards
+site_url: http://docs.bigboards.io
+repo_url: https://bitbucket.org/bigboards
+site_description: 'BigBoards Hex, from 0 to Big Data in less than 1 hour'
+site_favicon: favicon.ico
 pages:
 - [index.md, Home]
 - [versions.md, Versions]
