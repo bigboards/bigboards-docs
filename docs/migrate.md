@@ -34,7 +34,7 @@ where version-name can be **genesis** or **feniks**.
 
 Be sure to run `bb update` afterwards to effectively apply all changes to your hex.
 
-## Patching your system
+## <a name="patching"></a> Patching your system
 There are moments when you want to get to the latest version of the bigboards software. We create patches to make the most profound modifications to your hex. These patches are included inside the bigboards-updater application and they have to be run in a specific order. But don't worry, that isn't something you should be concerned about. If you want to patch the system, simply run the following command:
 
 	⬢ > bb update
