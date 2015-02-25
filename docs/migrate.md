@@ -27,7 +27,7 @@ Make sure you jot down the IP adress of your master node, \<hex-name\>-n1. Durin
 
 Switching version becomes as simple as 
 
-	⬢ > bb switch version <version-name>
+	⬢ > bb version switch <version-name>
 	⬢ > bb update
 
 where version-name can be **genesis** or **feniks**.
