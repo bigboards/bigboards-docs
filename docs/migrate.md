@@ -11,7 +11,7 @@ If you are running genesis, the command above will return `snapshots/`. If you a
 ## Installing the `bb` CLI on Genesis
 If you are running genesis you will notice the bb utility is not available. We only added it since feniks but there is an option to install it by hand. Follow these steps to get the `bb` CLI utility:
 
- 1. Make sure that all the latest versions of the software are installed: `⬢ > /opt/bb/runtimes/bigboards-update/update.sh`
+ 1. Make sure that all the latest versions of the software are installed: `⬢ > /opt/bb/runtimes/bigboards-updater/update.sh`
  1. Open the apt sources.list file holding the software repositories: `⬢ > sudo nano /etc/apt/sources.list`
  1. Find the line stating `deb http://apt.bigboards.io/repo snapshots/`. It should be near the last line in the file.
  1. Change `snapshots/` into `feniks/`
