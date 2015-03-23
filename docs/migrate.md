@@ -14,7 +14,7 @@ If you are running genesis you will notice the bb utility is not available. We o
  1. Make sure that all the latest versions of the software are installed: `⬢ > /opt/bb/runtimes/bigboards-updater/update.sh`
  1. Open the apt sources.list file holding the software repositories: `⬢ > sudo nano /etc/apt/sources.list`
  1. Find the line stating `deb http://apt.bigboards.io/repo snapshots/`. It should be near the last line in the file.
- 1. Change `snapshots/` into `feniks/`
+ 1. Change the line into `deb http://apt.bigboards.io/ feniks main`
  1. Save the changes using *ctrl-x*, *Y*, *enter*.
  1. run `sudo apt-get update`
  1. run `sudo apt-get install bigboards-cli`
