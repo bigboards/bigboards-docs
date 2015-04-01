@@ -30,8 +30,8 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. Connect it to power
 1. Login to the master node via SSH 
 2. Run these commands
-	1. `apt-get update`
-	2. `apt-get install bigboards-updater`
+	1. `sudo apt-get update`
+	2. `sudo apt-get install bigboards-updater`
 	3. `cd`
 	4. `./runtimes/bigboards-updater/update.sh`
 
