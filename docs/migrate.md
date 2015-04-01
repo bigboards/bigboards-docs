@@ -6,7 +6,8 @@ You can check the version you are running by executing the following command:
 
 	⬢ > grep bigboards /etc/apt/sources.list | cut -d' ' -f3
 
-If you are running genesis, the command above will return `snapshots/`. If you are running feniks the command will return `feniks/`
+* If you are running **genesis**, the command above will return `snapshots/`. 
+* If you are running **feniks**, the command will return `feniks/`
 
 ## Installing the `bb` CLI on Genesis
 If you are running genesis you will notice the bb utility is not available. We only added it since feniks but there is an option to install it by hand. Follow these steps to get the `bb` CLI utility:
