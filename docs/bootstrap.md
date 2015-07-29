@@ -40,6 +40,8 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. `bb system bootstrap`
 	1. `bb firmware upgrade ember`
 	1. `bb firmware update`
+1. Switch IP range for the internal network
+   1. `bb network switch 10.17.xyz` where you can choose the subnet
 
 ## Verify proper functioning of your Hex
 After the initialisation in the previous step, your Hex should be at the required firmware and fully operational. 
