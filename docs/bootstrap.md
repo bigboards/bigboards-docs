@@ -22,28 +22,30 @@ We have build a project to generate the SD cards on a laptop. Our supported envi
 
 ![Hex and order of nodes](hex-nodes.svg)
 
-## Update your Hex to the latest level of Genesis
-After you generated your SD cards for your Hex, it is initialised at firmware v1.0. So we need to bring it to the latest level of the `genesis` release before we can start installing e.g. the `bb CLI` or anything else.
+## Update your Hex to the latest firmware level
+After you generated your SD cards for your Hex, it is initialised at firmware v1.0. So we need to bring it to the latest level of the firmware before we can start installing e.g. the `bb CLI` or anything else.
 
-1. Start your Hex
+1. Login to your master node
 	1. Connect it to your LAN
 	1. Connect it to power
-1. Login to the master node via SSH 
+	1. `ssh bb@<hex>-n1.local`
+1. Check your current firmware version
+   1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
+   1. `sudo vim /etc/apt/sources.list`
+   1. `deb http://apt.bigboards.io/ ember main` as last line
 1. Run these commands to install the updater and MMC into the latest version
-	1. `sudo apt-get update`
-	1. `sudo apt-get install bigboards-updater`
-	1. `cd`
-	1. `./runtimes/bigboards-updater/update.sh`
-1. Install all the `genesis` patches
-	1. `cd ~/runtimes/bigboards-updater`
-	1. `./patch.sh 20140505`
- 	1. `./patch.sh 20140914`
+   1. `sudo apt-get update`
+	1. `sudo apt-get install bigboards-cli`
+	1. `bb system purge-legacy`
+	1. `bb system bootstrap`
+	1. `bb firmware upgrade ember`
+	1. `bb firmware update`
 
 ## Verify proper functioning of your Hex
 After the initialisation in the previous step, your Hex should be at firmware v1.0 and ready for first operations. 
 
 Simply verify your Hex by 
 
-1. browse to the management console `http://<hex>--n1.local:7000`
+1. browse to the management console `http://<hex>-n1.local:7000`
 1. check that all your nodes are visible in the dashboard
 1. can you access all your nodes via SSH?
