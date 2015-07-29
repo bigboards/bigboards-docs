@@ -6,7 +6,7 @@
 2. Bringing the system to the latest level of the firmware
 3. Verifying proper functioning of your device
 
-## Burning SD cards
+## Burning SD cards/Users/wvl
 We have build a project to generate the SD cards on a laptop. Our supported environment is a laptop running Ubuntu (14.4) with an integrated SD card reader. 
 
 > All our tests to burn SD cards with an USB dongle failed miserably. We have no clue why. However, this could allow us to generate 6 SD cards fully in parallel!
@@ -42,9 +42,9 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. `bb firmware update`
 
 ## Verify proper functioning of your Hex
-After the initialisation in the previous step, your Hex should be at firmware v1.0 and ready for first operations. 
+After the initialisation in the previous step, your Hex should be at the required firmware and fully operational. 
 
-Simply verify your Hex by 
+Verify your Hex by 
 
 1. browse to the management console `http://<hex>-n1.local:7000`
 1. check that all your nodes are visible in the dashboard
