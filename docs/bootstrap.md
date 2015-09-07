@@ -32,16 +32,16 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 1. Check your current firmware version
     1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
     1. `sudo vim /etc/apt/sources.list`
-    1. `deb http://apt.bigboards.io/ ember main` as last line
+    1. `deb http://apt.bigboards.io/ gemini main` as last line
 1. Run these commands to install the updater and MMC into the latest version
     1. `sudo apt-get update`
 	1. `sudo apt-get install bigboards-cli`
 	1. `bb system purge-legacy`
 	1. `bb system bootstrap`
-	1. `bb firmware upgrade ember`
+	1. `bb firmware upgrade gemini`
 	1. `bb firmware update`
 1. Switch IP range for the internal network
-   1. `bb network switch 10.17.xyz` where you can choose the subnet
+   1. `bb network switch 10.20.xyz` where xyz is the Hex's number in Podio
 
 ## Verify proper functioning of your Hex
 After the initialisation in the previous step, your Hex should be at the required firmware and fully operational. 

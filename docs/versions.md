@@ -16,3 +16,6 @@ And then it happened. News started pouring in that some guys had managed to get 
 
 ## BigBoards Ember
 Ember is our intermediate release, building further upon Docker as application virtualisation technology for our Tints. Ember has numerous bug fixes to render you Hex more stable as before!
+
+## BigBoards Gemini
+Gemini is twins release, finally officializing **nHex** as our new model of your personal cluster! nHex is the same type of 6-node personal cluster but centered around **Intel NUC** as platform for compute nodes. We have models available with Intel i3, i5 and i7 processors with 8GB or 16GB or RAM per node!!!
