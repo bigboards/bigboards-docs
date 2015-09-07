@@ -17,7 +17,7 @@ We have build a project to generate the SD cards on a laptop. Our supported envi
 	1. configure the script to generate SD cards for a specific Hex under the `hex` section, specifically `name` and `id`
 1. Run the `./setup.sh [1..6]` script for each SD card 
 1. Insert the generated SD cards in order in your Hex. 
-	1. The 1st card is for the master node, i.e. the node where the power supply is connected.
+	1. The 1st card is for the master node, i.e. the node where the network uplink is connected.
 	1. The 2nd until 6th card are inserted in clockwise order when looking at the hex from the top
 
 ![Hex and order of nodes](hex-nodes.svg)
