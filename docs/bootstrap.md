@@ -30,11 +30,11 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. Connect it to power
 	1. `ssh bb@<hex>-n1.local`
 1. Check your current firmware version
-   1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
-   1. `sudo vim /etc/apt/sources.list`
-   1. `deb http://apt.bigboards.io/ ember main` as last line
+    1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
+    1. `sudo vim /etc/apt/sources.list`
+    1. `deb http://apt.bigboards.io/ ember main` as last line
 1. Run these commands to install the updater and MMC into the latest version
-   1. `sudo apt-get update`
+    1. `sudo apt-get update`
 	1. `sudo apt-get install bigboards-cli`
 	1. `bb system purge-legacy`
 	1. `bb system bootstrap`
