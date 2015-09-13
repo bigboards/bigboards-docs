@@ -15,7 +15,7 @@ Since the Hex is an electronic device, it benefits from having power. This means
 
 Pointing your browser to 
 ```
-http://alice-n1.local:7000
+http://<hex-name>.hex.bigboards.io:7000/
 ```
 will present you with a view on your hex. It allows you to install tints and even open a shell to a specific node to enter commands. How is that for power at your fingertips!
 
@@ -24,10 +24,16 @@ will present you with a view on your hex. It allows you to install tints and eve
 Every node can be addressed using SSH using the **bb** user.
 
 ```
-my-laptop:> ssh bb@alice-n1.local
+my-laptop:> ssh bb@<hex-name>.hex.bigboards.io
 ```
 
 The password for this user is ```Swh^bdl```.
 
-## Adding a tint to the library
-Before we can actually install a new tint, we have to add it to the library inside the hex. At this point tints can only be installed from bitbucket.org (no we don't have shares there), but that will change in the near future. 
+## Installing a tint from the library
+The library is prefilled with available Tints for your Hex. Just go to 
+
+````
+http://<hex-name>.hex.bigboards.io:7000/#/library
+````
+
+to choose the Tint you want to install. Click on it, to get to the details. Click ont he Install button to install it on your Hex.
