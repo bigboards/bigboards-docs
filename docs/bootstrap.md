@@ -6,14 +6,19 @@
 1. Bringing the system to the latest level of the firmware
 1. Verifying proper functioning of your device
 
-## Burning SD cards/Users/wvl
+> **WARNING**
+> 
+> We boostrap your Hex for you in our labs!!! So, unless you have been **explicitly asked by us** to rebootstrap your device,  you should NEVER execute this procedure yourself!!!
+
+
+## Burning SD cards
 We have build a project to generate the SD cards on a laptop. Our supported environment is a laptop running Ubuntu (14.4) with an integrated SD card reader. 
 
 > All our tests to burn SD cards with an USB dongle failed miserably. We have no clue why. However, this could allow us to generate 6 SD cards fully in parallel!
 
 1. Clone the bigboards-bootstrap project at `http://bitbucket.org/bigboards/bigboards-bootstrap.git`
 1. Adjust the file `groupvars/all` to 
-	1. suit your environment regarding SD card reader which is defined under the `disk` section, specifically `dev` and `'part`
+	1. suit your environment regarding SD card reader which is defined under the `disk` section, specifically `dev` and `part`
 	1. configure the script to generate SD cards for a specific Hex under the `hex` section, specifically `name` and `id`
 1. Run the `./setup.sh [1..6]` script for each SD card 
 1. Insert the generated SD cards in order in your Hex. 
