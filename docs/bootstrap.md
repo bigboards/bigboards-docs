@@ -44,7 +44,7 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. `bb system bootstrap`
 	1. `bb firmware upgrade gemini`
 	1. `bb firmware update`
-1. Switch IP range for the internal network
+1. If your internal network is on a conflichting range, you can switch the IP range
 	1. `bb network switch 10.20.xyz` where xyz is the Hex's number in Podio
 
 ## Verify proper functioning of your Hex
