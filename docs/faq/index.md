@@ -9,3 +9,6 @@ We want to make it as easy as possible for people to create their own tints. We 
 ## My tint isn't installing, I'm not even getting any task output!
 This is one we ran into ourselfs quite frequently. It is probably caused by some step in the tint installation process asking for user input. 
 One of the usual suspects is the git checkout task. If the git repository defined in the tint metadata is private, cloning it means you'll have to enter a password. For now there is no other way around it than to make the repository public.
+
+## ERROR: cannot find role in /opt/bb/tints.d/stack/...
+This means there is an error in the tint metadata. Most likely a container in a group has been mistyped.
