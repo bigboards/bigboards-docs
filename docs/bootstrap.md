@@ -33,7 +33,7 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 1. Login to your master node
 	1. Connect it to your LAN
 	1. Connect it to power
-	1. `ssh bb@<hex>-n1.local`
+	1. `ssh bb@<hex>.hex.bigboards.io`
 1. Check your current firmware version
 	1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
 	1. `sudo vim /etc/apt/sources.list`
@@ -52,6 +52,6 @@ After the initialisation in the previous step, your Hex should be at the require
 
 Verify your Hex by 
 
-1. browse to the management console `http://<hex>-n1.local:7000`
+1. browse to the management console `http://<hex>.hex.bigboards.io:7000`
 1. check that all your nodes are visible in the dashboard
 1. can you access all your nodes via SSH?
