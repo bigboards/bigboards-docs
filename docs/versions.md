@@ -19,3 +19,6 @@ Ember is our intermediate release, building further upon Docker as application v
 
 ## BigBoards Gemini
 Gemini is twins release, finally officializing **nHex** as our new model of your personal cluster! nHex is the same type of 6-node personal cluster but centered around **Intel NUC** as platform for compute nodes. We have models available with Intel i3, i5 and i7 processors with 8GB or 16GB or RAM per node!!!
+
+## BigBoards v1.3
+From version `v1.3`onward, your devices and the **Library** with it **Tints** are managed from the central **Hive**. You can find it at <http://hive.bigboards.io>.   

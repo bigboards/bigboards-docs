@@ -1,3 +1,3 @@
 # BigBoards
-## From zero to big data in less then an hour
+**From zero to big data in less then an hour**
 
