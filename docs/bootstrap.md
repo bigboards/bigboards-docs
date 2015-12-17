@@ -34,18 +34,19 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. Connect it to your LAN
 	1. Connect it to power
 	1. `ssh bb@<hex>.hex.bigboards.io`
-1. Check your current firmware version
+1. Check your current firmware version on the [versions](./versions.md) page
 	1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
 	1. `sudo vim /etc/apt/sources.list`
-	1. `deb http://apt.bigboards.io/ gemini main` as last line
+	1. `deb http://apt.bigboards.io/ <version> main` as last line
 1. Run these commands to install the updater and MMC into the latest version
 	1. `sudo apt-get update`
 	1. `sudo apt-get install bigboards-cli`
 	1. `bb system bootstrap`
-	1. `bb firmware upgrade gemini`
+	1. `bb firmware upgrade <version>`
 	1. `bb firmware update`
 1. If your internal network is on a conflichting range, you can switch the IP range
-	1. `bb network switch 10.20.xyz` where xyz is the Hex's number in Podio
+	1. `bb network switch xxx.yyy.zzz` to choose the network subnet you like to use.
+	1. Normally your Hex is initialized to `10.20.xyz` where `xyz` is the Hex's number in our backoffice application (Podio)
 
 ## Verify proper functioning of your Hex
 After the initialisation in the previous step, your Hex should be at the required firmware and fully operational. 
