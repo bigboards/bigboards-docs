@@ -1,13 +1,12 @@
 site_name: BigBoards
 pages:
 - [index.md, Home]
-- [versions.md, Versions]
-- [migrate.md, Migrate]
 - [gettingstarted.md, Getting Started]
-- [userguide/mmc.md, User Guide, Management Console]
-- [userguide/cli.md, User Guide, Command Line]
-- [userguide/node.md, User Guide, A Node]
-- [userguide/network.md, User Guide, Network]
-- [userguide/createstack.md, User Guide, Create a tint]
+- [hardware/index.md, Hardware]
+- [software/index.md, Software]
+- [apps/index.md, Apps]
+- [apps/anatomy.md, Apps, Anatomy]
+- [apps/create/start.md, Create An App, Getting Started]
+- [apps/create/docker.md, Create An App, Create Docker Container]
 - [faq/index.md, FAQ]
-theme: readthedocs 
+theme: material

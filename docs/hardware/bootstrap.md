@@ -8,7 +8,7 @@
 
 > **WARNING**
 > 
-> We boostrap your Hex for you in our labs!!! So, unless you have been **explicitly asked by us** to rebootstrap your device,  you should NEVER execute this procedure yourself!!!
+> We bootstrap your Hex for you in our labs!!! So, unless you have been **explicitly asked by us** to rebootstrap your device,  you should NEVER execute this procedure yourself!!!
 
 
 ## Burning SD cards
@@ -25,7 +25,7 @@ We have build a project to generate the SD cards on a laptop. Our supported envi
 	1. The 1st card is for the master node, i.e. the node where the network uplink is connected.
 	1. The 2nd until 6th card are inserted in clockwise order when looking at the hex from the top
 
-![Hex and order of nodes](hex-nodes.svg)
+![Hex and order of nodes](../images/hex-nodes.svg)
 
 ## Update your Hex to the latest firmware level
 After you generated your SD cards for your Hex, it is initialised at firmware v1.0. So we need to bring it to the latest level of the firmware before we can start installing e.g. the `bb CLI` or anything else.

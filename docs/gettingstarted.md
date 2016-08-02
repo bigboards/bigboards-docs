@@ -1,6 +1,19 @@
 # Getting Started 
 
-You Hex is delivered to you as a fully assembled and completely installed device! There is nothing additional you have to do, but to unbox it and start to use it!
+To get you up and going as fast as possible, here are the steps you need to take:
+
+ 1. Plug in power and network
+ 2. Connect your browser to `http://<hex-name>.hex.bigboards.io:7000/`
+ 3. Install a tint from the library 
+
+There are two versions of the hardware device so the installation procedure differs a bit depending on the version you have.
+ 
+## Getting started with a cube
+The power connector for the cube is a round DIN4 connector and you will have to press it in 
+firmly for the device to start. The supplied power supply can be used for any AC voltage 
+between 110V and 230V, so you will be able to use it close to anywhere on the planet.
+
+## Getting started with a hex
 
 ## Powering On
 
