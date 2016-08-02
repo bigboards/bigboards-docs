@@ -4,13 +4,16 @@ repo_url: https://bitbucket.org/bigboards
 site_description: 'BigBoards, from 0 to Big Data in less than 1 hour'
 site_favicon: favicon.ico
 pages:
-- [index.md, Home]
-- [gettingstarted.md, Getting Started]
-- [hardware/index.md, Hardware]
-- [software/index.md, Software]
-- [apps/index.md, Apps]
-- [apps/anatomy.md, Apps, Anatomy]
-- [apps/create/start.md, Create An App, Getting Started]
-- [apps/create/docker.md, Create An App, Create Docker Container]
-- [faq/index.md, FAQ]
+  - 'Home': index.md
+  - 'Getting Started': gettingstarted.md
+  - 'Hardware': hardware/index.md
+  - 'Software': software/index.md
+  - 'Apps': 
+    - 'What are apps?': apps/index.md
+    - 'Anatomy': apps/anatomy.md
+    - 'Create your own': 
+      - 'Start': apps/create/start.md
+      - 'Docker': apps/create/docker.md
+      - 'Configuration': apps/create/configuration.md
+  - 'FAQ': faq/index.md
 theme: readthedocs
