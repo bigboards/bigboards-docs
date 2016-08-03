@@ -35,24 +35,19 @@ If a variable or attribute does not exist, you will get back an undefined value.
 
 The following cluster variables are available:
 
-+-----------------------+-----------------------------------------------------------------------------+
-| name                  | Description                                                                 |
-+-----------------------+-----------------------------------------------------------------------------+
-| hex.id                | The unique id of the hex                                                    |
-| hex.name              | The name of the hex                                                         |
-| hex.arch              | The architecture of the hex                                                 |
-| hex.network_range     | The network range used in the hex                                           |
-| hex.node_count        | The amount of nodes in this cluster                                         |
-| hex.hive.token        | The token used to authenticate with the cloud (if connected)                |
-| hex.hive.user.id      | The user id to which this hex is linked (if connected to cloud)             |
-| hex.hive.user.name    | The name of the user to which this hex is linked (if connected to cloud)    |
-| hex.hive.user.email   | The email address of the user to which the hex is linked (if connected)     |
-| firmware              | The firmware version number                                                 |
-| docker.registry       | The docker registry used for installing                                     |
-| dirs.data             | The data directory for the current container                                |
-| dirs.config           | The configuration directory for the current container                       |
-| tint.id               | The id of the app you are installing                                        |
-+-----------------------+-----------------------------------------------------------------------------+
+ - **hex.id** - the unique id of the hex
+ - **hex.name** - the name of the hex
+ - **hex.arch** - the architecture of the hex
+ - **hex.network_range** - the network range used for the internal network
+ - **hex.node_count** - the number of nodes in this cluster
+ - **hex.hive.user.id** - the id of the user to which this cluster is linked (if it is linked)
+ - **hex.hive.user.name** - the name of the user to which this cluster is linked (if it is linked)
+ - **hex.hive.user.email** - the email address of the user to which this cluster is linked (if it is linked)
+ - **firmware** - the firmware version
+ - **docker.registry** - the default docker registry used for installing the app
+ - **dirs.data** - the data directory on the **host** filesystem used for this container
+ - **dirs.config** - the config directory on the **host** filesystem used for this container
+ - **tint.id** - the id of the app you are installing
 
 ### Conditionals
 
