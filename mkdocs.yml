@@ -1,6 +1,6 @@
 site_name: BigBoards
 site_url: http://docs.bigboards.io
-repo_url: https://bitbucket.org/bigboards
+repo_url: https://github.com/bigboards/bigboards-docs
 site_description: 'BigBoards, from 0 to Big Data in less than 1 hour'
 site_favicon: favicon.ico
 pages:
@@ -15,5 +15,6 @@ pages:
       - 'Start': apps/create/start.md
       - 'Docker': apps/create/docker.md
       - 'Configuration': apps/create/configuration.md
+      - 'Define': apps/create/define.md
   - 'FAQ': faq/index.md
 theme: readthedocs
