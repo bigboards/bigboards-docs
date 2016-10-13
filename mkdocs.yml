@@ -6,8 +6,16 @@ site_favicon: favicon.ico
 pages:
   - 'Home': index.md
   - 'Getting Started': gettingstarted.md
+    - 'Linking': software/link.md
   - 'Hardware': hardware/index.md
+    - 'Networking': hardware/network.md
   - 'Software': software/index.md
+    - 'Hive': software/hive.md
+    - 'MMC': software/mmc.md
+    - 'CLI': software/cli.md 
+    - 'Bootstrap': software/bootstrap.md
+    - 'Linking': software/link.md
+    - 'Upgrade': software/migrate.md
   - 'Apps': 
     - 'What are apps?': apps/index.md
     - 'Anatomy': apps/anatomy.md
@@ -17,4 +25,5 @@ pages:
       - 'Configuration': apps/create/configuration.md
       - 'Define': apps/create/define.md
   - 'FAQ': faq/index.md
+  - 'Versions': versions.md
 theme: readthedocs
