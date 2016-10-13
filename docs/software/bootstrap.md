@@ -41,6 +41,7 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 1. Run these commands to install the updater and MMC into the latest version
 	1. `sudo apt-get update`
 	1. `sudo apt-get install bigboards-cli`
+	1. `bb system init` which asks for your device's name and number of nodes
 	1. `bb system bootstrap`
 	1. `bb firmware upgrade <version>`
 	1. `bb firmware update`
