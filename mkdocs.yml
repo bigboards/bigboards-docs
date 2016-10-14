@@ -1,0 +1,29 @@
+site_name: BigBoards
+site_url: http://docs.bigboards.io
+repo_url: https://github.com/bigboards/bigboards-docs
+site_description: 'BigBoards, from 0 to Big Data in less than 1 hour'
+site_favicon: favicon.ico
+pages:
+  - 'Home': index.md
+  - 'Getting Started': gettingstarted.md
+    - 'Linking': software/link.md
+  - 'Hardware': hardware/index.md
+    - 'Networking': hardware/network.md
+  - 'Software': software/index.md
+    - 'Hive': software/hive.md
+    - 'MMC': software/mmc.md
+    - 'CLI': software/cli.md 
+    - 'Bootstrap': software/bootstrap.md
+    - 'Linking': software/link.md
+    - 'Upgrade': software/migrate.md
+  - 'Apps': 
+    - 'What are apps?': apps/index.md
+    - 'Anatomy': apps/anatomy.md
+    - 'Create your own': 
+      - 'Start': apps/create/start.md
+      - 'Docker': apps/create/docker.md
+      - 'Configuration': apps/create/configuration.md
+      - 'Define': apps/create/define.md
+  - 'FAQ': faq/index.md
+  - 'Versions': versions.md
+theme: readthedocs
