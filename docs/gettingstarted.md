@@ -1,14 +1,13 @@
-# Getting Started 
-
+# Big Data in 1-2-3
 To get you up and running as fast as possible, here are the steps you need to take:
 
  1. Plug in network and power
  2. Ensure your cluster is linked to the Hive
- 2. Connect your browser to `http://<hex-name>.hex.bigboards.io:7000/`
+ 2. Connect your browser to the MMC `http://<hex-name>.hex.bigboards.io:7000/`
  3. Install an app from the library 
 
 ## Network and power
-Since your BigBoards micro-cluster is an networked electronic device, it benefits from being connected ot your LAN and getting power. This means you will have to make a connection from your device to a free ethernet port and your wall outlet. 
+Since your BigBoards micro-cluster is a networked electronic device, it benefits from being connected ot your LAN and getting power. This means you will have to make a connection from your device to a free ethernet port and your wall outlet. 
 
 > An external power supply is shipped with your device.
 
@@ -65,7 +64,7 @@ The MMC allows you to operate your device:
 
 How is that for power at your fingertips!
 
-## Connecting using SSH
+### Alternatively, connect using SSH
 
 Every node can be addressed using SSH using the **bb** user.
 
@@ -75,13 +74,12 @@ my-laptop:> ssh bb@<cluster-name>-n[1-6].<cluster-name>.hex.bigboards.io
 
 The password for the `bb` user is ```Swh^bdl```.
 
-## Installing an app from the library
-The library is prefilled with available app for your micro-cluster. You can simply install any of these by the click of a button. Go to 
+## Install an app
+The BigBoards Library is prefilled with available app for your micro-cluster. You can simply install any of these by the click of a button. 
+
+Go to [http://<hex-name>.hex.bigboards.io:7000/#/library](http://<hex-name>.hex.bigboards.io:7000/#/library)
 
 
-[http://<hex-name>.hex.bigboards.io:7000/#/library](http://<hex-name>.hex.bigboards.io:7000/#/library)
-
-
-Choose the app that you want to install. Click on it, to get to the details. Click ont he `Install` button to install it on your Hex.
+Choose the app that you want to install. Click on it, to get to the details. Click on the `Install` button to install it on your Hex.
 
 And you are good to go!

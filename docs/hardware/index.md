@@ -1,8 +1,8 @@
-# Hardware
+# Micro-clusters
 
-The BigBoards micro-clusters are purpose-build hardware to fulfill the requirements for anyone interested in learning and working with data at scale.
+The BigBoards micro-clusters are purpose-build hardware to fulfill the requirements for anyone interested in, learning about or working with data at scale.
 
-As such your BigBoards device is a true physical big data cluster. It actually is a micro-datacenter on its own, consisting of a number identical nodes. 
+As such your BigBoards device is a true physical big data cluster. It is a small datacenter on its own, consisting of a number identical nodes. 
 
 The BigBoards devices are built around the popular [Intel NUC platform](http://www.intel.com/nuc). 
 
@@ -21,7 +21,7 @@ If you would have *specific hardware requirements*, do reach out to us for a *cu
 
 All nodes in our micro-clusters are interconnected via a **1GB ethernet** network. 
 
-## Models
+## Models - Hex and Cubes
 While the name of the models refers to the shape of the device, it is also an indication to the amount
 of nodes inside them:
 

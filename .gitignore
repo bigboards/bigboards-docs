@@ -5,3 +5,5 @@ build
 docs/site/
 docs/site
 docs/_themes
+site/
+_build_html/

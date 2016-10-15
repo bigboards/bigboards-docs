@@ -1,4 +1,4 @@
-# Hive
+# Overview
 The BigBoards Hive is the central nervous system of your micro-cluster, where you can see what [apps](/apps/index.md) can be installed and define your own.
 
 The Hive is hosted at [http://hive.bigboards.io](http://hive.bigboards.io)
@@ -17,7 +17,7 @@ A login/signup dialog as underneath will appear. Complete to either signup or lo
 
 ![Login dialog](../images/hive-login-dialog.png)
 
-## Your Hive Profile
+## Your profile and short-id
 
 After you have logged in to the Hive, you can get quick access to your profile. Click on your profile image in the upper right corner. A dropdown will show your details:
 

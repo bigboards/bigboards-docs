@@ -1,6 +1,4 @@
-#Versions
-
-Following versions of the on device firmware can be found in the wild (oldest first):
+Following versions of the on-device firmware can be found in the wild (oldest versions first):
 
 ## Genesis
 Version `genesis` is the first version of the software on top of the BigBoards hex. It provides a web-based management console and uses serf to communicate between the nodes. Tints are running inside an LXC container as a whole operating system. Problems with the stability of Genesis led to the creation of Feniks.
