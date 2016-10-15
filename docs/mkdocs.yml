@@ -4,9 +4,9 @@ repo_url: https://github.com/bigboards/bigboards-docs
 site_description: 'BigBoards, from 0 to Big Data in less than 1 hour'
 site_favicon: favicon.ico
 pages:
-  - 'Home': index.md
-  - 'Getting Started': gettingstarted.md
-    - 'Linking': software/link.md
+  - 'Start here':
+    - 'BigBoards': index.md
+    - 'Getting Started': gettingstarted.md
   - 'Hardware': hardware/index.md
     - 'Networking': hardware/network.md
   - 'Software': software/index.md
