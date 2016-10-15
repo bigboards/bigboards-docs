@@ -1,19 +1,11 @@
-# BigBoards
-BigBoards is a startup with a focus on making learning and working with data at scale as easy as possible. 
-We are as open as possible about everything we do, have done and will do. In the end, we just like
-scalable data processing and want to make sure everyone can enjoy and understand it.
+# Start here
+At BigBoards we make learning and working with data at scale as easy as possible. 
+We are also as open as possible about everything we do, have done and will do. In the end, we just like scalable data processing and want to make sure everyone can enjoy and understand it.
 
-We tackle the complexity of learning and working with data from two fronts. 
+We tackle the complexity of learning and working with data from 2 fronts:
 
-The Hex and Cube are two devices available to meet the hardware needs for anyone interested in data.
-Both devices have multiple processing and storage nodes and an interconnect between all the components.
-Feed them with power and network and you are ready to go.
+The [Hex and Cube](hardware) are two micro-clusters to meet the hardware needs for anyone interested in data. Both devices have multiple nodes for data storage and processing that are  interconnected over a network. Only feed them with power and network and you are ready to go.
 
-We have also created a software platform meant for making deployments of popular data technologies a
-walk in the park. Ever installed an application on your smartphone? That is the kind of ease-of-use
-we are aiming for. Technologies are reduced to apps installed on top of the hardware devices. We will do
-the hard work figuring out the configuration so you can just click and install.
+On top of that, our [software platform](software) makes deployments of popular data technologies a walk in the park. Ever installed an application on your smartphone? That is the kind of ease-of-use we bring. Technologies are reduced to apps installed on top of the hardware devices. We will do the hard work, so you can just click and install.
 
-This website hosts the documentation for the bigboards hardware and software. It is very much
-a work in progress. If you have any suggestions, reach out through mail (hello@bigboards.io) or slack
-so we can discuss them.
+Right now, you are looking at the documentation for the BigBoards hardware and software. It still is a work in progress. If you have any suggestions, reach out through mail ([hello@bigboards.io](mailto:hello@bigboards.io)), use our [support application](https://bigboards.uservoice.com/) or join our [Slack community](https://bigboards-tints.slack.com).
