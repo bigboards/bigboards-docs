@@ -1,0 +1,4 @@
+# FAQ about errors
+
+## ERROR: cannot find role in /opt/bb/tints.d/stack/...
+This means there is an error in the app's metadata. Most likely a container in a group has been mistyped.

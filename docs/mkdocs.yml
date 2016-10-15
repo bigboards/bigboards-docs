@@ -7,6 +7,7 @@ pages:
   - 'Start here':
     - 'BigBoards': index.md
     - 'Getting Started': gettingstarted.md
+    - 'Versions': versions.md
   - 'Hardware': hardware/index.md
     - 'Networking': hardware/network.md
   - 'Software': software/index.md
@@ -24,6 +25,8 @@ pages:
       - 'Docker': apps/create/docker.md
       - 'Configuration': apps/create/configuration.md
       - 'Define': apps/create/define.md
-  - 'FAQ': faq/index.md
-  - 'Versions': versions.md
+  - 'FAQ': 
+    - 'Apps': faq/apps.md
+    - 'Network': faq/network.md
+    - 'Errors': faq/errors.md
 theme: readthedocs
