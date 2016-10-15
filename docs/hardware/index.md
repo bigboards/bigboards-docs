@@ -1,3 +1,5 @@
+# Hardware
+
 The BigBoards micro-clusters are purpose-build hardware to fulfill the requirements for anyone interested in learning and working with data at scale.
 
 As such your BigBoards device is a true physical big data cluster. It actually is a micro-datacenter on its own, consisting of a number identical nodes. 
