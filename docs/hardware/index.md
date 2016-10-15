@@ -1,11 +1,10 @@
-# Hardware
 The BigBoards micro-clusters are purpose-build hardware to fulfill the requirements for anyone interested in learning and working with data at scale.
 
 As such your BigBoards device is a true physical big data cluster. It actually is a micro-datacenter on its own, consisting of a number identical nodes. 
 
 The BigBoards devices are built around the popular [Intel NUC platform](http://www.intel.com/nuc). 
 
-## 1 Node
+## Single node
 
 A single node in your micro-cluster is a complete computer, incl. cpu, memory and storage. It is up to the apps that you install on top of these nodes, to combine all these separate resources into a cluster and make all the nodes act as 1 system.
 
