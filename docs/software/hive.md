@@ -1,5 +1,5 @@
 # Hive
-The BigBoards Hive is the central nervous system of your micro-cluster, where you can see what [apps](apps/index.md) can be installed and define your own.
+The BigBoards Hive is the central nervous system of your micro-cluster, where you can see what [apps](/apps/index.md) can be installed and define your own.
 
 The Hive is hosted at [http://hive.bigboards.io](http://hive.bigboards.io)
 

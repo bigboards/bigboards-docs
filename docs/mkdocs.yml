@@ -7,7 +7,7 @@ pages:
   - 'BigBoards': index.md
   - 'Start here':
     - 'Getting Started': gettingstarted.md
-    - 'Versions': versions.md
+    - 'Versions': software/versions.md
   - 'Hardware': 
     - 'Hardware': hardware/index.md
     - 'Networking': hardware/network.md
