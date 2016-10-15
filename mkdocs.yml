@@ -12,7 +12,6 @@ pages:
     - 'Overview': 'hardware/index.md'
     - 'Networking': 'hardware/network.md'
   - Software: 
-    - 'Software': 'software/index.md'
     - 'Hive': 'software/hive.md'
     - 'MMC': 'software/mmc.md'
     - 'CLI': 'software/cli.md'
