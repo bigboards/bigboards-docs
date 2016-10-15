@@ -8,9 +8,11 @@ pages:
     - 'BigBoards': index.md
     - 'Getting Started': gettingstarted.md
     - 'Versions': versions.md
-  - 'Hardware': hardware/index.md
+  - 'Hardware': 
+    - 'Hardware': hardware/index.md
     - 'Networking': hardware/network.md
-  - 'Software': software/index.md
+  - 'Software': 
+    - 'Software': software/index.md
     - 'Hive': software/hive.md
     - 'MMC': software/mmc.md
     - 'CLI': software/cli.md 
