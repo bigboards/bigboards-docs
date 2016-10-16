@@ -1,12 +1,12 @@
 # Migrating to another release
-Hexes running on some version can be upgraded to a newer version through the use of the ```bb``` command.
+BigBoards devices running on some older version of the firmware can be upgraded to the latest version through the use of the `bb` command.
 
 ## What version am I on?
 You can check the version you are running by executing the following command:
 
 	⬢ > grep bigboards /etc/apt/sources.list | cut -d' ' -f3
 
-This command will return one of '<version>/' as found on the [versions] page.
+This command will return one of `<version>` as found on the [versions](versions) page.
 
 ## Installing the `bb` CLI on Genesis
 **Remark**
