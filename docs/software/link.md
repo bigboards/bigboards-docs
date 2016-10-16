@@ -2,7 +2,7 @@
 Before you can start using your BigBoards micro-cluster properly, you must link your device to your account on the [BigBoards Hive](software/hive) and also register all it's nodes in the Hive and to the cluster.
 
 ## Add your cluster to the Hive
-Log in to the Hive as described [here](software/hive). 
+Log in to the Hive as described [here](hive). 
 
 In the upper right corner of the Hive app, sits the [cluster button](http://hive.bigboards.io/#/clusters) that takes you to list of your clusters. 
 
@@ -22,7 +22,7 @@ The settings panel will show your name to confirm the linking.
 If your device is already linked to an account, you can unlink it by clicking the ``unlink`` button. The panel will change to the multiline text field.
 
 ## Register all your nodes to the Hive
-Log in to the Hive as described [here](software/hive). 
+Log in to the Hive as described [here](hive). 
 
 In the upper right corner of the Hive app, sits the [devices button](http://hive.bigboards.io/#/devices) that take you to the list of your devices.
 
