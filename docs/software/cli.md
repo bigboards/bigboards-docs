@@ -10,6 +10,17 @@ Change the internal network prefix. If you want to combine multiple hexes in the
 > bb network switch 172.20.30
 ```
 
+### proxy
+Set the proxy settings for various of your micro-cluster's networked services. The command will interactively ask for HTTP and HTTPS server addresses and ports. 
+
+```
+> bb network proxy
+> Please enter the address of your HTTP proxy server [eg. my-proxy.my-domain.com]:
+> Please enter the port of your HTTP proxy server [eg. 8080]:
+> Please enter the address of your HTTPS proxy server [eg. my-proxy.my-domain.com]: 
+> Please enter the port of your HTTPS proxy server [eg. 8080]:
+```
+
 ## version
 ### switch
 BigBoards uses different releases and will only give you updates in a specific release. However, if you want to upgrade the version of the release you can do so by invoking 

@@ -10,7 +10,7 @@ This command will return one of `<version>` as found on the [versions](versions)
 
 ## Installing the `bb` CLI on Genesis
 **Remark**
-This procedure should only be applied when your Hex is running on the *genesis* version of the firmware.
+This procedure should only be applied when your BigBoards device is running on the *genesis* version of the firmware.
 
 If you are running *genesis* you will notice the bb utility is not available. We only added it since *feniks* but 
 there is an option to install it by hand. Follow these steps to get the `bb` CLI utility:
