@@ -2,9 +2,9 @@
 
 The BigBoards micro-clusters are purpose-build hardware to fulfill the requirements for anyone interested in, learning about or working with data at scale.
 
-As such your BigBoards device is a true physical big data cluster. It is a small datacenter on its own, consisting of a number identical nodes. 
+As such your BigBoards device is a true physical big data cluster. It is a small datacenter on its own, consisting of a number of identical nodes. 
 
-The BigBoards devices are built around the popular [Intel NUC platform](http://www.intel.com/nuc). 
+The BigBoards devices are built around the popular [Intel NUC platform](http://www.intel.com/nuc) or [Wandboard quad-core ARM platform](http://www.wandboard.org/). 
 
 ## Single node
 
