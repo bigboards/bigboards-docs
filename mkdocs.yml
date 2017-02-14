@@ -4,29 +4,30 @@ repo_url: https://github.com/bigboards/bigboards-docs
 site_description: 'BigBoards, from 0 to Big Data in less than 1 hour'
 site_favicon: favicon.ico
 pages:
-  - Start here: 
+  - Start here:
     - 'BigBoards': 'index.md'
     - 'Getting started': 'gettingstarted.md'
     - 'Firmware versions': 'software/versions.md'
-  - Hardware: 
+  - Hardware:
     - 'Overview': 'hardware/index.md'
     - 'Networking': 'hardware/network.md'
-  - Software: 
+  - Software:
     - 'Hive': 'software/hive.md'
     - 'MMC': 'software/mmc.md'
     - 'CLI': 'software/cli.md'
     - 'Bootstrap': 'software/bootstrap.md'
     - 'Linking': 'software/link.md'
+    - 'Update': 'software/update.md'
     - 'Upgrade': 'software/migrate.md'
-  - Apps: 
+  - Apps:
     - 'What are apps?': 'apps/index.md'
     - 'Anatomy': 'apps/anatomy.md'
-    - Create your own: 
+    - Create your own:
       - 'Start': 'apps/create/start.md'
       - 'Docker': 'apps/create/docker.md'
       - 'Configuration': 'apps/create/configuration.md'
       - 'Define': 'apps/create/define.md'
-  - FAQ: 
+  - FAQ:
     - 'Apps': faq/apps.md
     - 'Network': faq/network.md
     - 'Errors': faq/errors.md
