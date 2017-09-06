@@ -50,7 +50,7 @@ If not, follow [the guide to link your cluster](software/link).
 
 ## The MMC
 
-Point your browser to [http://<hex-name>.hex.bigboards.io:7000/](http://hive.bigboards.io/#/clusters)
+Point your browser to [http://&lt;hex-name&gt;.hex.bigboards.io:7000/](http://&lt;hex-name&gt;.hex.bigboards.io:7000/)
 
 What you see is the management console of your micro-cluster. We call it the **MMC**. More info [here](software/mmc). 
 
