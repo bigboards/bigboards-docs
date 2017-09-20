@@ -1,39 +1,61 @@
 # Bootstrapping your device
 
-**Boostrapping** is actually initialising your Hex from scratch. It encompasses 3 steps: 
+**Boostrapping** is actually initialising your device from scratch. It encompasses 3 steps: 
 
-1. Burning bootable images on all 6 SD cards of your device
+1. Burning bootable images on all 6 SSDs if your have an Intel device, or SD cards if you have an ARM device
 1. Bringing the system to the latest level of the firmware
 1. Verifying proper functioning of your device
 
 > **WARNING**
 > 
-> We bootstrap your Hex for you in our labs!!! So, unless you have been **explicitly asked by us** to rebootstrap your device,  you should NEVER execute this procedure yourself!!!
+> We bootstrap your device for you in our labs!!! 
+>
+> So, unless you have been **explicitly asked by us** to re-bootstrap your device,  you should NEVER execute this procedure yourself!!!
 
 
 ## Burning SD cards
-We have build a project to generate the SD cards on a laptop. Our supported environment is a laptop running Ubuntu (14.4) with an integrated SD card reader. 
+We have build a project to generate the SSDs and SD cards on a laptop. The supported environment is a 
+computer running Ubuntu (14.4) with an integrated SD card reader for the micro SDHC cards, or a USB to 
+M.2 SATA converter for the NUC SSDs. 
 
-> All our tests to burn SD cards with an USB dongle failed miserably. We have no clue why. However, this could allow us to generate 6 SD cards fully in parallel!
+You can also [generate SD card images on a Wandboard](generate_SD_wandboard.md), if e.g. you have a ARM device at your disposal. 
 
-1. Clone the bigboards-bootstrap project at `http://bitbucket.org/bigboards/bigboards-bootstrap.git`
-1. Adjust the file `groupvars/all` to 
-	1. suit your environment regarding SD card reader which is defined under the `disk` section, specifically `dev` and `part`
-	1. configure the script to generate SD cards for a specific Hex under the `hex` section, specifically `name` and `id`
-1. Run the `./setup.sh [1..6]` script for each SD card 
-1. Insert the generated SD cards in order in your Hex. 
-	1. The 1st card is for the master node, i.e. the node where the network uplink is connected.
-	1. The 2nd until 6th card are inserted in clockwise order when looking at the hex from the top
+> All our tests to burn SD cards with an USB dongle failed miserably. We have no clue why. However, this would allow us to generate 6 SD cards fully in parallel!
+
+1. Clone the bigboards-bootstrap project at `https://github.com/bigboards/bigboards-bootstrap.git`
+1. Check if the profile for your device is present under `./profiles; if not: 
+    1. run `./addprofile` and answer the questions to provide:
+        1. `<NAME>` of your device
+        1. `<ARCH>` of your device, either `armv7l` or `x86_64`
+        1. `<SEQ>` of your device, is the number of your device in our backoffice application; ask us if you require it. The sequence number of your devcie also becomes visible as your device's internal IP address `172.17.<SEQ>`
+1. Adjust the disk image environment to suit your needs:
+    1. Depending on the host system on which you are generating the disk images, you'll run `burn` on Intel en `burn-arm` on ARM
+    1. Run `sudo fdisk -l` with an SSD or SD card inserted to validat device and partition numbering on your host
+    1. Verify the shell script if the default `DEVICE` is in line with the output of `fdisk`  
+    1. Check the file `<MY_ARCH>/vars/environment` if the partition number is in line with the output of `fdisk`  
+1. Run `./burn <device-name>` or `./burn-arm <device-name>` for all the SSDs or SD cards you have to generate
+    1. On a Wandboard you might have to reboot the host for each card, because if fails to unmount the SD card properly 
+
+## Booting your device
+
+Insert the generated SSDs or SD cards in the correct sequence in your device: 
+
+1. The **1st disk or card** is for the **master node**, i.e. the node at the side where the network uplink is connected to your Hex.
+1. The **2nd until 6th disk or card** are inserted in **clockwise** order when looking at your device from the top
+
+Power up your device!
 
 ![Hex and order of nodes](../images/hex-nodes.svg)
 
-## Update your Hex to the latest firmware level
-After you generated your SD cards for your Hex, it is initialised at firmware v1.0. So we need to bring it to the latest level of the firmware before we can start installing e.g. the `bb CLI` or anything else.
+## Update your device to the latest firmware level
+After you generated the SSDs or SD cards for your devcice, it is initialised at firmware v1.0. 
+So we need to bring it to the latest level of the firmware before we can start installing 
+e.g. the `bb CLI` or anything else.
 
 1. Login to your master node
 	1. Connect it to your LAN
 	1. Connect it to power
-	1. `ssh bb@<hex>.hex.bigboards.io`
+	1. `ssh bb@<device-ip>` using either the internal or the external IP. Normally your device
 1. Check your current firmware version on the [versions](./versions.md) page
 	1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
 	1. `sudo vim /etc/apt/sources.list`
@@ -47,13 +69,15 @@ After you generated your SD cards for your Hex, it is initialised at firmware v1
 	1. `bb firmware update`
 1. If your internal network is on a conflichting range, you can switch the IP range
 	1. `bb network switch xxx.yyy.zzz` to choose the network subnet you like to use.
-	1. Normally your Hex is initialized to `10.20.xyz` where `xyz` is the Hex's number in our backoffice application (Podio)
+	1. Normally your device is initialized to `172.17.<SEQ>` where `<SEQ>` is the device's number in our backoffice application
 
-## Verify proper functioning of your Hex
-After the initialisation in the previous step, your Hex should be at the required firmware and fully operational. 
+## Verify proper functioning of your device
+After the initialisation in the previous step, your device should be at the required firmware and fully operational. 
 
-Verify your Hex by 
+Verify your device by 
 
-1. browse to the management console `http://<hex>.hex.bigboards.io:7000`
+1. browse to the management console `http://<device-ip>:7000` using either the internal or the external IP. Normally your device
 1. check that all your nodes are visible in the dashboard
 1. can you access all your nodes via SSH?
+
+The next step is to [link your device](link.md) to the [BigBoards Hive](hive.md).
