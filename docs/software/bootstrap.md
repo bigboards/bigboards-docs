@@ -26,15 +26,14 @@ You can also [generate SD card images on a Wandboard](generate_SD_wandboard.md),
 1. Check if the profile for your device is present under `./profiles; if not: 
     1. run `./addprofile` and answer the questions to provide:
         1. `<NAME>` of your device
-        1. `<ARCH>` of your device, either `armv7l` or `x86_64`
-        1. `<SEQ>` of your device, is the number of your device in our backoffice application; ask us if you require it. The sequence number of your devcie also becomes visible as your device's internal IP address `172.17.<SEQ>`
+        1. `<ARCH>` of your device, either `armv7l` or `x86_64` 
+        1. `<SEQ>` of your device, is the number of your device in our back-office application; ask us if you require it. The sequence number of your device also becomes visible as your device's internal IP address `172.17.<SEQ>`
 1. Adjust the disk image environment to suit your needs:
     1. Depending on the host system on which you are generating the disk images, you'll run `burn` on Intel en `burn-arm` on ARM
-    1. Run `sudo fdisk -l` with an SSD or SD card inserted to validat device and partition numbering on your host
+    1. Run `sudo fdisk -l` with an SSD or SD card inserted to validate device and partition numbering on your host
     1. Verify the shell script if the default `DEVICE` is in line with the output of `fdisk`  
-    1. Check the file `<MY_ARCH>/vars/environment` if the partition number is in line with the output of `fdisk`  
-1. Run `./burn <device-name>` or `./burn-arm <device-name>` for all the SSDs or SD cards you have to generate
-    1. On a Wandboard you might have to reboot the host for each card, because if fails to unmount the SD card properly 
+    1. Check the file `<MY_ARCH>/vars/environment` if the partition number is in line with the output of `fdisk`    
+1. Run `./burn <device-name>` or `./burn-arm <device-name>` for all the SSDs or SD cards you have to generate. On a Wandboard you might have to reboot the host for each card, because if fails to unmount the SD card properly  
 
 ## Booting your device
 
@@ -48,7 +47,7 @@ Power up your device!
 ![Hex and order of nodes](../images/hex-nodes.svg)
 
 ## Update your device to the latest firmware level
-After you generated the SSDs or SD cards for your devcice, it is initialised at firmware v1.0. 
+After you generated the SSDs or SD cards for your device, it is initialised at firmware v1.0. 
 So we need to bring it to the latest level of the firmware before we can start installing 
 e.g. the `bb CLI` or anything else.
 
