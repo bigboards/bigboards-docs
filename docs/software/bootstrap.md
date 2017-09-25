@@ -42,20 +42,25 @@ Insert the generated SSDs or SD cards in the correct sequence in your device:
 1. The **1st disk or card** is for the **master node**, i.e. the node at the side where the network uplink is connected to your Hex.
 1. The **2nd until 6th disk or card** are inserted in **clockwise** order when looking at your device from the top
 
-Power up your device!
-
 ![Hex and order of nodes](../images/hex-nodes.svg)
+
+Power up your device! 
+After booting your device for the 1st time, verify that you can connect to all nodes via SSH. 
+
+`ssh bb@<device-ip>` using either the internal network or the external IP address. To find the external address you can: 
+
+* use an **mDNS browser** like Bonjour
+* run an **`arp -a`** command for discovery
+* check your **router** or **DHCP server** for handed out IP addresses  
+
 
 ## Update your device to the latest firmware level
 After you generated the SSDs or SD cards for your device, it is initialised at firmware v1.0. 
 So we need to bring it to the latest level of the firmware before we can start installing 
 e.g. the `bb CLI` or anything else.
 
-1. Login to your master node
-	1. Connect it to your LAN
-	1. Connect it to power
-	1. `ssh bb@<device-ip>` using either the internal or the external IP. Normally your device
-1. Check your current firmware version on the [versions](./versions.md) page
+1. Login to your 1st/master node
+1. Check your current firmware version on the [versions](./versions.md) page. Currently, `v1.3` is the latest.
 	1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
 	1. `sudo vim /etc/apt/sources.list`
 	1. `deb http://apt.bigboards.io/ <version> main` as last line
