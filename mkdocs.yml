@@ -11,6 +11,7 @@ pages:
   - Hardware:
     - 'Overview': 'hardware/index.md'
     - 'Networking': 'hardware/network.md'
+    - 'Factory reset': 'hardware/factory-reset.md'
   - Software:
     - 'Hive': 'software/hive.md'
     - 'MMC': 'software/mmc.md'

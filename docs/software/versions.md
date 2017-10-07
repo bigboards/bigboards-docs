@@ -1,3 +1,4 @@
+#Versions
 Different versions of the on-device firmware can be found in the wild. The list underneath is chronologically ordered, oldest versions first. 
 
 To check the firmware version of your device, you can run this command on the first node of your Hex: 
