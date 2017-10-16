@@ -40,4 +40,5 @@ To uninstall the BigBoards firmware, simply run
 
 ```
 bb hardware reset
+sudo apt-get remove bigboards-cli
 ```
