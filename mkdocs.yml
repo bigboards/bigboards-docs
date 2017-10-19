@@ -11,6 +11,7 @@ pages:
   - Hardware:
     - 'Overview': 'hardware/index.md'
     - 'Networking': 'hardware/network.md'
+    - 'Attach screen': 'hardware/attach-screen.md'
     - 'Factory reset': 'hardware/factory-reset.md'
   - Software:
     - 'Hive': 'software/hive.md'
@@ -29,7 +30,9 @@ pages:
       - 'Configuration': 'apps/create/configuration.md'
       - 'Define': 'apps/create/define.md'
   - FAQ:
-    - 'Apps': faq/apps.md
-    - 'Network': faq/network.md
-    - 'Errors': faq/errors.md
+    - 'Apps': 'faq/apps.md'
+    - 'Network': 'faq/network.md'
+    - 'Errors': 'faq/errors.md'
+  - Advanced:
+    - 'Docker Swarm': 'advanced/docker-swarm.md'
 theme: readthedocs
