@@ -34,10 +34,11 @@ We will be commandeering the Kubernetes cluster from the master node of your Big
 1. `kubectl config set-credentials admin --username=bb`
 1. `kubectl config use-context <hex-name>`
 1. `kubectl config view`
-1. `ansible host -s -m file -a "path=/var/lib/kube-proxy/kubeconfig state=directory mode=0755"`
-1. `ansible host -s -m file -a "path=/var/lib/kubelet/kubeconfig state=directory mode=0755"`
-1. `ansible host -s -m copy -a "src=~/.kube/config dest=/var/lib/kube-proxy/kubeconfig/config mode=0644"`
-1. `ansible host -s -m copy -a "src=~/.kube/config dest=/var/lib/kubelet/kubeconfig/config mode=0644"`
+1. `ansible host -s -m file -a "path=/etc/kubernetes state=directory mode=0755"`
+1. `ansible host -s -m file -a "path=/var/lib/kube-proxy state=directory mode=0755"`
+1. `ansible host -s -m file -a "path=/var/lib/kubelet state=directory mode=0755"`
+1. `ansible host -s -m copy -a "src=~/.kube/config dest=/var/lib/kube-proxy/kubeconfig mode=0644"`
+1. `ansible host -s -m copy -a "src=~/.kube/config dest=/var/lib/kubelet/kubeconfig mode=0644"`
 
 ## Install docker
 
@@ -70,3 +71,113 @@ To [Install Kubernetes binaries](https://kubernetes.io/docs/getting-started-guid
 1. `ansible host -s -m file -a "path=/opt/k8s/${K8S_VERSION} state=directory mode=0755"`
 1. `ansible host -s -m copy -a "src=/tmp/kubernetes dest=/opt/k8s/${K8S_VERSION} mode=0644"`
 1. `ansible host -s -m file -a "path=/opt/k8s/kubernetes src=/opt/k8s//${K8S_VERSION} state=link mode=0644"`
+
+## Activate Kubernetes services
+Now that we have installed the Kubernetes binaries, we have to run the necessary daemons as system services. 
+
+The approash was inspired by [trusty-kubernetes.sh](https://gist.github.com/lenartj/0b264cb70e6cb50dfdef37084f892554) 
+
+1. generate the /etc/kubernetes/.conf files
+```bash
+cat >/tmp/kube.conf <<EOF
+KUBE_LOGTOSTDERR="--logtostderr=false"
+KUBE_LOG_LEVEL="--v=4"
+KUBE_MASTER="--master={{ ansible_hostname }}-n1:8080"
+KUBE_ALLOW_PRIV="--allow-privileged=false"
+EOF
+``` 
+
+```bash
+cat >/tmp/kubelet.conf <<EOF
+KUBELET_ADDRESS="--address=0.0.0.0"
+KUBELET_PORT="--port=10250"
+KUBELET_HOSTNAME="--hostname-override={{ inventory_hostname }}"
+KUBELET_API_SERVER="--api-servers=http://{{ ansible_local.bb.hex.id }}-n1:8080"
+
+KUBELET_KUBECONFIG_ARGS="--kubeconfig=/var/lib/kubelet/kubeconfig --require-kubeconfig=true"
+KUBELET_SYSTEM_PODS_ARGS="--pod-manifest-path=/etc/kubernetes/manifests"
+KUBELET_NETWORK_ARGS="--register-node --configure-cbr0=true --node-ip={{ hostvars[ansible_hostname]['ansible_' + ansible_local.bb.node.nic_ext].ipv4.address }}"
+KUBELET_DNS_ARGS="--cluster-dns={{ ansible_local.bb.hex.id }}-n1 --cluster-domain={{ ansible_local.bb.hex.id }}.k8s.local"
+KUBELET_AUTHZ_ARGS="--authorization-mode=AlwaysAllow"
+EOF
+``` 
+
+```bash
+cat >/tmp/kube-proxy.conf <<EOF
+KUBE_PROXY_ARGS=""
+EOF
+``` 
+
+2. generate the /etc/init/.conf files
+```bash
+cat >/tmp/kubelet.init.conf <<EOF
+description "Kubelet"
+
+start on (docker)
+stop on runlevel [!2345]
+
+limit nproc unlimited unlimited
+
+respawn
+kill timeout 30
+
+script
+    if [ -f /etc/kubernetes/kube.config ]; then
+        . /etc/kubernetes/kube.config
+    fi
+
+    if [ -f /etc/kubernetes/kubelet.conf ]; then
+            . /etc/kubernetes/kubelet.conf
+    fi
+        
+    exec /usr/bin/kubelet \
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBELET_API_SERVER \
+        $KUBELET_ADDRESS \
+        $KUBELET_PORT \
+        $KUBELET_HOSTNAME \
+        $KUBE_ALLOW_PRIV \
+        $KUBELET_KUBECONFIG_ARGS 
+        $KUBELET_SYSTEM_PODS_ARGS \
+        $KUBELET_NETWORK_ARGS \
+        $KUBELET_DNS_ARGS \
+        $KUBELET_AUTHZ_ARGS \
+        $KUBELET_EXTRA_ARGS
+end script
+EOF
+``` 
+
+```bash
+cat >/tmp/kube-proxy.init.conf <<EOF
+description "KubeProxy"
+
+start on (filesystem and net-device-up IFACE!=lo)
+stop on runlevel [!2345]
+
+limit nofile 65536 65536
+
+respawn
+kill timeout 30
+
+script
+    if [ -f /etc/kubernetes/kube.config ]; then
+        . /etc/kubernetes/kube.config
+    fi
+
+    if [ -f /etc/kubernetes/kube-proxy.conf ]; then
+            . /etc/kubernetes/kube-proxy.conf
+    fi
+        
+ exec /usr/bin/kube-proxy \
+    $KUBE_LOGTOSTDERR \
+    $KUBE_LOG_LEVEL \
+    $KUBE_MASTER \
+    $KUBE_PROXY_ARGS
+end script
+EOF
+``` 
+
+3. Copy init.conf files
+    1. `ansible host -s -m template -a "src=/tmp/kube.conf dest=/etc/kubernetes/kube.conf mode=0644"`
+ 
