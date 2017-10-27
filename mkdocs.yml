@@ -13,6 +13,7 @@ pages:
     - 'Networking': 'hardware/network.md'
     - 'Attach screen': 'hardware/attach-screen.md'
     - 'Factory reset': 'hardware/factory-reset.md'
+    - 'Install alt OS': 'hardware/install-alt-os.md'
   - Software:
     - 'Hive': 'software/hive.md'
     - 'MMC': 'software/mmc.md'
@@ -35,4 +36,5 @@ pages:
     - 'Errors': 'faq/errors.md'
   - Advanced:
     - 'Docker Swarm': 'advanced/docker-swarm.md'
+    - 'Kubernetes': 'advanced/kubernetes.ml'
 theme: readthedocs
