@@ -64,6 +64,7 @@ e.g. the `bb CLI` or anything else.
 	1. `grep bigboards /etc/apt/sources.list | cut -d' ' -f3`
 	1. `sudo vim /etc/apt/sources.list`
 	1. `deb http://apt.bigboards.io/ <version> main` as last line
+	1. Make sure all nodes have their `/etc/apt/sources.list` setup like this
 1. Run these commands to install the updater and MMC into the latest version
 	1. `sudo apt-get update`
 	1. `sudo apt-get install bigboards-cli`
