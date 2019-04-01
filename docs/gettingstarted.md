@@ -7,7 +7,7 @@ To get you up and running as fast as possible, here are the steps you need to ta
  3. Install an app from the library 
 
 ## Network and power
-Since your BigBoards micro-cluster is a networked electronic device, it benefits from being connected ot your LAN and getting power. This means you will have to make a connection from your device to a free ethernet port and your wall outlet. 
+Since your BigBoards micro-cluster is a networked electronic device, it benefits from being connected to your LAN and getting power. This means you will have to make a connection from your device to a free ethernet port and your wall outlet. 
 
 > An external power supply is shipped with your device.
 
