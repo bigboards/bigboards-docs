@@ -76,7 +76,7 @@ $ ansible host-workers -s -i inventories/<hex-name>.yml -m shell -a 'kubeadm joi
 ## Install dashboard
 Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
 
-![Kubernetes dashboard](https://raw.githubusercontent.com/kubernetes/dashboard/master/docs/dashboard-ui.png)
+![Kubernetes dashboard](k8s-dashboard-ui.png)
 
 To install
 
