@@ -130,13 +130,13 @@ To undo what kubeadm did, you should first [drain the node](https://kubernetes.i
 Talking to the master with the appropriate credentials, run:
 
 ```
-kubectl drain <node name> --delete-local-data --force --ignore-daemonsets
-kubectl delete node <node name>
+$ kubectl drain <node name> --delete-local-data --force --ignore-daemonsets
+$ kubectl delete node <node name>
 ```
 
 Then, on the node being removed, reset all kubeadm installed state:
 ```
-kubeadm reset
+$ kubeadm reset
 ```
 
 If you wish to start over simply run `kubeadm init` or `kubeadm join` with the appropriate arguments.
