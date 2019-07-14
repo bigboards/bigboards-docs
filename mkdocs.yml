@@ -36,5 +36,5 @@ pages:
     - 'Errors': 'faq/errors.md'
   - Advanced:
     - 'Docker Swarm': 'advanced/docker-swarm.md'
-    - 'Kubernetes': 'advanced/kubernetes.ml'
+    - 'Kubernetes': 'advanced/kubernetes.md'
 theme: readthedocs
